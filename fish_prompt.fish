@@ -29,6 +29,8 @@ function _git_branch_indicator
     end
     _git_branch_name
   end
+
+  echo -n " "
 end
 
 function _print_prompt_character
@@ -38,7 +40,7 @@ function _print_prompt_character
     set_color red
   end
 
-  echo -n " · "
+  echo -n "· "
 
   set_color normal
 end
