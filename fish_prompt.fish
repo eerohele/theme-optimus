@@ -29,8 +29,6 @@ function _git_branch_indicator
     end
     _git_branch_name
   end
-
-  echo -n " "
 end
 
 function _print_prompt_character
@@ -40,15 +38,10 @@ function _print_prompt_character
     set_color red
   end
 
-  echo -n "· "
-
-  set_color normal
+  printf "·"
 end
 
 function fish_prompt
   set last_status $status
-  echo -n (_current_dir)
-  echo -n " "
-  echo -n (_git_branch_indicator)
-  _print_prompt_character $last_status
+  string join ' ' (_current_dir) (_git_branch_indicator) (_print_prompt_character $last_status) '' | tr -d \n
 end
