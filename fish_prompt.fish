@@ -1,4 +1,5 @@
 function _current_dir
+  set_color white
   string replace $HOME '~' $PWD
 end
 
