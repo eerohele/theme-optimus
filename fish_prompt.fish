@@ -35,8 +35,10 @@ end
 function _print_prompt_character
   if [ $argv = 0 ]
     set_color green
-  else
+  else if [ $argv = 1 ]
     set_color red
+  else
+    set_color blue
   end
 
   printf "·"
