@@ -1,5 +1,5 @@
 # Optimus
 
-Optimus is my [Fish] prompt.
+Optimus is my [Fish] prompt theme.
 
 [Fish]: https://fishshell.com
